@@ -1,7 +1,7 @@
 name: ieee754_dart
 description: Js implementation of ieee754.
 version: 0.0.1
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/pheonixeye/ieee754_dart.git
 
 environment:
   sdk: '>=2.19.2 <3.0.0'

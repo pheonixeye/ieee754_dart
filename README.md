@@ -11,29 +11,54 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+JS implementation of ieee754.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Contains two methods to read and write.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Use this package as a library
+Depend on it
+Run this command:
+
+With Dart:
+ $ dart pub add ieee754_dart
+
+With Flutter:
+ $ flutter pub add ieee754_dart
+
+This will add a line like this to your package's pubspec.yaml (and run an implicit dart pub get):
+
+dependencies:
+  ieee754_dart: ^0.0.1
+
+Alternatively, your editor might support dart pub get or flutter pub get. Check the docs for your editor to learn more.
+
+Import it
+Now in your Dart code, you can use:
+
+import 'package:ieee754_dart/ieee754_dart.dart';
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+The `Ieee754` class has the following functions:
 
-```dart
-const like = 'sample';
 ```
+Ieee754.read = function (buffer, offset, isLE, mLen, nBytes)
+Ieee754.write = function (buffer, value, offset, isLE, mLen, nBytes)
+```
+
+The arguments mean the following:
+
+- buffer = the buffer(Uint8List)
+- offset = offset into the buffer
+- value = value to set (only for `write`)
+- isLe = is little endian?
+- mLen = mantissa length
+- nBytes = number of bytes
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+The IEEE Standard for Floating-Point Arithmetic (IEEE 754) is a technical standard for floating-point computation. [Read more](http://en.wikipedia.org/wiki/IEEE_floating_point).
