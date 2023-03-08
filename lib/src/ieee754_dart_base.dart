@@ -36,7 +36,7 @@ class Ieee754 {
     return (s == 0 ? -1 : 1) * m * math.pow(2, e - mLen);
   }
 
-  static write(Uint8List buffer, int value, int offset, bool isLE, int mLen,
+  static write(Uint8List buffer, double value, int offset, bool isLE, int mLen,
       int nBytes) {
     int e;
     int m;
